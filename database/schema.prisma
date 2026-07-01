@@ -1,0 +1,149 @@
+// Prisma schema — Portafolio Elías Cárdenas
+// Ejecutar: npx prisma migrate dev --name init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}
+
+enum SkillCategory {
+  FRONTEND
+  BACKEND
+  DATABASE
+  CLOUD
+  TOOLS
+  SOFT_SKILLS
+}
+
+enum ProjectStatus {
+  COMPLETED
+  IN_PROGRESS
+}
+
+enum MessageStatus {
+  UNREAD
+  READ
+  ARCHIVED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("users")
+}
+
+model Project {
+  id          String        @id @default(cuid())
+  title       String
+  slug        String        @unique
+  description String
+  bullets     String[]      @default([])
+  tech        String[]      @default([])
+  imageUrl    String?
+  repoUrl     String?
+  demoUrl     String?
+  period      String?
+  status      ProjectStatus @default(COMPLETED)
+  featured    Boolean       @default(false)
+  order       Int           @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@map("projects")
+}
+
+model Skill {
+  id        String        @id @default(cuid())
+  name      String
+  category  SkillCategory
+  level     Int?          @default(3)
+  order     Int           @default(0)
+  createdAt DateTime      @default(now())
+
+  @@unique([name, category])
+  @@map("skills")
+}
+
+model Experience {
+  id           String   @id @default(cuid())
+  role         String
+  organization String
+  period       String
+  current      Boolean  @default(false)
+  bullets      String[] @default([])
+  order        Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("experience")
+}
+
+model Education {
+  id          String   @id @default(cuid())
+  institution String
+  period      String
+  description String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@map("education")
+}
+
+model Certificate {
+  id          String   @id @default(cuid())
+  title       String
+  issuer      String
+  issueDate   DateTime?
+  credentialUrl String?
+  imageUrl    String?
+  category    String?
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@map("certificates")
+}
+
+model Message {
+  id        String        @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  status    MessageStatus @default(UNREAD)
+  createdAt DateTime      @default(now())
+
+  @@map("messages")
+}
+
+model SocialLink {
+  id       String  @id @default(cuid())
+  label    String
+  url      String
+  icon     String
+  order    Int     @default(0)
+  isActive Boolean @default(true)
+
+  @@map("social_links")
+}
+
+model Setting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String
+
+  @@map("settings")
+}

@@ -1,0 +1,99 @@
+# Portafolio — Elías Salomón Cárdenas Cuellar
+
+Portafolio web profesional full-stack para Elías Cárdenas, Desarrollador Full Stack. Sitio multi-página con animaciones premium, panel de administración y backend propio conectado a PostgreSQL.
+
+![Stack](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Stack](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Stack](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![Stack](https://img.shields.io/badge/PostgreSQL-Prisma-336791?logo=postgresql&logoColor=white)
+
+## ✨ Características
+
+- **7 páginas independientes**: Inicio, Sobre mí, Proyectos, Experiencia, Skills, Certificados, Contacto
+- **Animaciones premium**: scroll reveal, parallax, text reveal, stagger, glassmorphism, tilt 3D, cursor personalizado, smooth scroll (Lenis)
+- **Datos extraídos 100% del CV real** — nada inventado
+- **Backend REST completo** con Express + TypeScript + Prisma + PostgreSQL
+- **Autenticación JWT** con roles (ADMIN / EDITOR)
+- **Formulario de contacto funcional**, conectado a base de datos, con rate-limiting anti-spam
+- **SEO**: meta tags, Open Graph, sitemap, robots.txt, JSON-LD (schema.org)
+- **Totalmente responsive**: móvil, tablet, laptop, desktop
+
+## 🗂️ Estructura del proyecto
+
+```
+portfolio-elias/
+├── frontend/          # React + TypeScript + Vite + Tailwind + Framer Motion + GSAP
+├── backend/           # Node.js + Express + TypeScript + Prisma
+├── database/          # Schema, migraciones y seed (referencia — vive también en backend/prisma)
+├── docs/              # Toda la documentación detallada
+└── assets/            # Recursos compartidos
+```
+
+## 🚀 Inicio rápido
+
+```bash
+# 1. Backend
+cd backend
+npm install
+cp .env.example .env        # edita DATABASE_URL y JWT_SECRET
+npx prisma generate
+npx prisma migrate dev --name init
+npx prisma db seed
+npm run dev                 # http://localhost:4000
+
+# 2. Frontend (en otra terminal)
+cd frontend
+npm install
+cp .env.example .env
+npm run dev                 # http://localhost:5173
+```
+
+📖 **Guía detallada paso a paso:** [`docs/manual-instalacion.md`](docs/manual-instalacion.md)
+🌐 **Cómo desplegar a producción:** [`docs/manual-despliegue.md`](docs/manual-despliegue.md)
+🔌 **Referencia completa de la API:** [`docs/api-documentation.md`](docs/api-documentation.md)
+🔐 **Variables de entorno:** [`docs/variables-entorno.md`](docs/variables-entorno.md)
+
+## 🛠️ Stack tecnológico
+
+**Frontend**
+- React 19 + TypeScript
+- React Router (multi-página)
+- Tailwind CSS v4
+- Framer Motion (animaciones de componentes)
+- GSAP (animaciones avanzadas de scroll)
+- Lenis (smooth scroll)
+- React Icons
+
+**Backend**
+- Node.js + Express 5 + TypeScript
+- Prisma ORM + PostgreSQL
+- JWT (jsonwebtoken) + bcryptjs
+- Zod (validación de esquemas)
+- Helmet, CORS, express-rate-limit (seguridad)
+
+## 📋 Modelo de datos
+
+| Tabla | Descripción |
+|---|---|
+| `users` | Usuarios admin con acceso al panel |
+| `projects` | Proyectos del portafolio |
+| `skills` | Habilidades técnicas por categoría |
+| `experience` | Experiencia laboral/académica |
+| `education` | Formación académica |
+| `certificates` | Certificaciones (vacío por ahora — el CV fuente no incluía certificados) |
+| `messages` | Mensajes recibidos vía formulario de contacto |
+| `social_links` | Enlaces a redes sociales |
+| `settings` | Configuración general del sitio |
+
+## ⚠️ Decisiones de alcance
+
+Este proyecto se construyó priorizando que **todo lo entregado funcione de extremo a extremo** en lugar de cubrir cada característica posible a medias. Algunas notas honestas:
+
+- **Astro y Three.js** no se incluyeron: el sitio es altamente interactivo client-side (poco beneficio de Astro), y no había un caso de uso 3D concreto que justificara el peso de Three.js.
+- **Envío de emails reales** no está conectado (requiere credenciales SMTP/Resend/SendGrid propias) — el formulario sí guarda los mensajes en PostgreSQL correctamente, y el código está preparado para que conectes tu proveedor de email favorito en `backend/src/services/message.service.ts`.
+- **Lighthouse 90+** no se puede certificar desde este entorno de desarrollo, pero el proyecto sigue las prácticas que lo hacen alcanzable: lazy loading, imágenes optimizadas, code splitting nativo de Vite, fuentes con `display=swap`.
+- **Certificados**: el CV fuente no incluye certificaciones, así que la página muestra un estado "próximamente" en lugar de inventar contenido falso.
+
+## 📄 Licencia
+
+Uso personal — Elías Salomón Cárdenas Cuellar, 2026.
