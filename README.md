@@ -11,11 +11,9 @@ Portafolio web profesional full-stack para Elías Cárdenas, Desarrollador Full 
 
 - **7 páginas independientes**: Inicio, Sobre mí, Proyectos, Experiencia, Skills, Certificados, Contacto
 - **Animaciones premium**: scroll reveal, parallax, text reveal, stagger, glassmorphism, tilt 3D, cursor personalizado, smooth scroll (Lenis)
-- **Datos extraídos 100% del CV real** — nada inventado
 - **Backend REST completo** con Express + TypeScript + Prisma + PostgreSQL
 - **Autenticación JWT** con roles (ADMIN / EDITOR)
 - **Formulario de contacto funcional**, conectado a base de datos, con rate-limiting anti-spam
-- **SEO**: meta tags, Open Graph, sitemap, robots.txt, JSON-LD (schema.org)
 - **Totalmente responsive**: móvil, tablet, laptop, desktop
 
 ## 🗂️ Estructura del proyecto
