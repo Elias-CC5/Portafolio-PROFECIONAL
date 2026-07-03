@@ -185,7 +185,7 @@ tech: ['React', 'Vite', 'JavaScript', 'NestJS', 'TypeScript', 'PostgreSQL', 'Red
       'Maquetado y experiencia de usuario del catálogo y checkout',
       'Trabajo en equipo dentro de un proyecto de tesis',
     ],
-tech: ['Astro', 'TypeScript', 'CSS', 'React', 'Vite',, 'Axios', 'Tailwind CSS',   'NestJS', 'Node.js', 'TypeORM', 'PostgreSQL', 'JWT (JSON Web Token)', 'Bcrypt', 'OpenRouter (SDK de OpenAI)', 'ST APIRE', ],    status: 'completed',
+tech: ['Astro', 'TypeScript', 'CSS', 'React', 'Vite', 'Axios', 'Tailwind CSS',   'NestJS', 'Node.js', 'TypeORM', 'PostgreSQL', 'JWT (JSON Web Token)', 'Bcrypt', 'OpenRouter (SDK de OpenAI)', 'ST APIRE', ],    status: 'completed',
     teamType: 'team',
     myRole: 'Diseño de frontend',
     context: 'Proyecto de tesis — Empresa de catering',
