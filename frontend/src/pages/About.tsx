@@ -160,8 +160,7 @@ export default function About() {
         {/* Glow ambiental de fondo con parallax */}
         <motion.div
           style={{ y: glowY }}
-          className="pointer-events-none absolute -top-40 left-1/3 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-[var(--color-accent)]/12 blur-[130px]"
-        />
+className="pointer-events-none absolute -top-40 left-1/3 h-[350px] w-[500px] -translate-x-1/2 rounded-full bg-[var(--color-accent)]/12 blur-[90px]"        />
         {/* Segundo glow secundario para más profundidad */}
         <div className="pointer-events-none absolute top-1/2 right-0 h-[300px] w-[400px] -translate-y-1/2 rounded-full bg-[var(--color-accent)]/6 blur-[100px]" />
 

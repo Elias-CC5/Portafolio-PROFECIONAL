@@ -3,8 +3,7 @@ import { useRef } from 'react';
 import { FiDownload, FiArrowRight } from 'react-icons/fi';
 import { profile, stats } from '@/data/portfolio';
 import { Link } from 'react-router-dom';
-import Typewriter from 'typewriter-effect';
-
+import TypewriterText from '@/components/ui/Typewritertext';
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
@@ -45,23 +44,13 @@ export default function Hero() {
           </span>
 
           {/* Título Principal - Ajustado interlineado y ortografía corregida ("Construyo") */}
-          <h1 className="max-w-xl text-[2.6rem] font-bold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-[3.5rem]">
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString('Construyo APIs, sistemas y UIs que no se caen a las 3 a.m.')
-                  .start();
-              }}
-              options={{
-                autoStart: true,
-                loop: false,
-                delay: 40,
-                cursor: '_',
-                wrapperClassName: 'text-white inline-block',
-                cursorClassName: 'text-zinc-600 animate-pulse font-light'
-              }}
-            />
-          </h1>
+         <TypewriterText
+  text="Construyo APIs, sistemas y UIs que no se caen a las 3 a.m."
+  as="h1"
+  delay={0.3}
+  speed={35}
+  className="max-w-xl text-[2.6rem] font-bold leading-[1.12] tracking-tight text-white sm:text-5xl md:text-[3.5rem]"
+/>
 
           {/* Línea decorativa sutil de tu captura */}
           <div className="mt-6 h-px w-8 bg-zinc-800" />
