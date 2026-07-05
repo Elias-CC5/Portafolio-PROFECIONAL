@@ -26,15 +26,15 @@ export default function Layout({ children }: { children: ReactNode }) {
       <ScrollProgress />
       <Navbar />
       <StatusBar />
-      <AnimatePresence mode="wait">
-        <motion.main
-          key={pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-          className="relative min-h-screen"
-        >
+      <AnimatePresence mode="sync">
+  <motion.main
+    key={pathname}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.15 }}
+    className="relative min-h-screen"
+  >
           {children}
         </motion.main>
       </AnimatePresence>
