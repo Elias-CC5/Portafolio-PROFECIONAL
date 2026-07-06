@@ -95,7 +95,7 @@ export default function Projects() {
           <Reveal delay={0.2} className="mt-16 text-center">
             <p className="text-sm text-[var(--color-paper-dim)]">¿Quieres ver más código?</p>
             <a
-              href="https://github.com/FAILO123"
+              href="https://github.com/Elias-CC5"
               target="_blank"
               rel="noreferrer"
               data-cursor-pointer
