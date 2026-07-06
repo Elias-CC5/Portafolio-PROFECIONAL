@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import CustomCursor from '@/components/ui/CustomCursor';
 import StatusBar from '@/components/ui/StatusBar';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import AmbientBackground from '@/components/ui/AmbientBackground';
@@ -22,7 +21,6 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <div className="grain" />
       <AmbientBackground />
-      <CustomCursor />
       <ScrollProgress />
       <Navbar />
       <StatusBar />
