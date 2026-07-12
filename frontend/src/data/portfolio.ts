@@ -63,6 +63,50 @@ export const skills: Skill[] = [
 ];
 
 export const projects: Project[] = [
+    {
+    id: 'tesis-catering',
+    slug: 'tesis-catering',
+    title: 'E-commerce para Empresa de Catering ',
+    period: '2026',
+    description:
+      'E-commerce desarrollado como proyecto de tesis para una empresa real de catering, donde los usuarios exploran productos y hacen reservas, con un panel de administración completo y chatbot integrado.',
+    longDescription:
+      'Como proyecto de tesis, el equipo buscó una empresa real de catering para desarrollar su tienda en línea. Los usuarios pueden explorar los productos y hacer reservas directamente con la empresa. Lo más destacado es el panel de administración, donde se puede verificar el stock, agregar o eliminar productos, gestionar usuarios y crear promociones. El sitio incluye además un chatbot integrado para responder preguntas sobre los productos, y el checkout utiliza Culqi como billetera digital de pago. Mi responsabilidad fue el diseño del frontend: una interfaz confiable, clara y fácil de entender para el usuario final.',
+    features: [
+      'Catálogo de productos y sistema de reservas con la empresa',
+      'Panel de administración: stock, productos, usuarios y promociones',
+      'Chatbot integrado para consultas sobre productos',
+      'Checkout con Culqi como billetera digital de pago',
+    ],
+    bullets: [
+      'Diseño de un frontend confiable y fácil de entender para el usuario',
+      'Maquetado y experiencia de usuario del catálogo y checkout',
+      'Trabajo en equipo dentro de un proyecto de tesis',
+    ],
+    tech: ['Astro', 'TypeScript', 'CSS', 'React', 'Axios', 'Tailwind CSS', 'NestJS', 'Node.js', 'TypeORM', 'PostgreSQL', 'JWT (JSON Web Token)', 'OpenRouter (SDK de OpenAI)'],
+    status: 'completed',
+    teamType: 'team',
+    myRole: 'Diseño de frontend',
+    context: 'Proyecto de tesis — Empresa de catering',
+    repoUrl: 'https://github.com/Jefferson-BA/TesisFrontend',
+    gallery: [
+      { src: '/images/E-COMMERCE/INICIO.png', label: 'Inicio' },
+      { src: '/images/E-COMMERCE/MENU.png', label: 'Menú' },
+      { src: '/images/E-COMMERCE/MENU2.png', label: 'Menú — vista 2' },
+      { src: '/images/E-COMMERCE/Catálogo%20de%20Productos.png', label: 'Catálogo de productos' },
+      { src: '/images/E-COMMERCE/LOGIN.png', label: 'Inicio de sesión' },
+      { src: '/images/E-COMMERCE/REGISTER.png', label: 'Registro' },
+      { src: '/images/E-COMMERCE/RESERVA.png', label: 'Reserva' },
+      { src: '/images/E-COMMERCE/RESERVA2.png', label: 'Reserva — vista 2' },
+      { src: '/images/E-COMMERCE/Reservas%20Eventos.png', label: 'Reservas de eventos' },
+      { src: '/images/E-COMMERCE/VISTA.png', label: 'Vista del producto' },
+      { src: '/images/E-COMMERCE/Gestión%20de%20Pedidos.png', label: 'Gestión de pedidos (admin)' },
+      { src: '/images/E-COMMERCE/Gestión%20de%20Pedidos2.png', label: 'Gestión de pedidos — vista 2' },
+      { src: '/images/E-COMMERCE/Gestión%20de%20Productos.png', label: 'Gestión de productos (admin)' },
+      { src: '/images/E-COMMERCE/Panel%20de%20Administración.png', label: 'Panel de administración' },
+      { src: '/images/E-COMMERCE/Promociones.png', label: 'Promociones' },
+    ],
+  },
   {
     id: 'gestion-pedidos',
     slug: 'gestion-pedidos',
@@ -164,50 +208,7 @@ export const projects: Project[] = [
       { src: '/images/Coffee%20Vibes/Crear%20Producto(Admin).png', label: 'Crear producto (admin)' },
     ],
   },
-  {
-    id: 'tesis-catering',
-    slug: 'tesis-catering',
-    title: 'E-commerce para Empresa de Catering ',
-    period: '2026',
-    description:
-      'E-commerce desarrollado como proyecto de tesis para una empresa real de catering, donde los usuarios exploran productos y hacen reservas, con un panel de administración completo y chatbot integrado.',
-    longDescription:
-      'Como proyecto de tesis, el equipo buscó una empresa real de catering para desarrollar su tienda en línea. Los usuarios pueden explorar los productos y hacer reservas directamente con la empresa. Lo más destacado es el panel de administración, donde se puede verificar el stock, agregar o eliminar productos, gestionar usuarios y crear promociones. El sitio incluye además un chatbot integrado para responder preguntas sobre los productos, y el checkout utiliza Culqi como billetera digital de pago. Mi responsabilidad fue el diseño del frontend: una interfaz confiable, clara y fácil de entender para el usuario final.',
-    features: [
-      'Catálogo de productos y sistema de reservas con la empresa',
-      'Panel de administración: stock, productos, usuarios y promociones',
-      'Chatbot integrado para consultas sobre productos',
-      'Checkout con Culqi como billetera digital de pago',
-    ],
-    bullets: [
-      'Diseño de un frontend confiable y fácil de entender para el usuario',
-      'Maquetado y experiencia de usuario del catálogo y checkout',
-      'Trabajo en equipo dentro de un proyecto de tesis',
-    ],
-    tech: ['Astro', 'TypeScript', 'CSS', 'React', 'Vite', 'Axios', 'Tailwind CSS', 'NestJS', 'Node.js', 'TypeORM', 'PostgreSQL', 'JWT (JSON Web Token)', 'Bcrypt', 'OpenRouter (SDK de OpenAI)', 'ST APIRE'],
-    status: 'completed',
-    teamType: 'team',
-    myRole: 'Diseño de frontend',
-    context: 'Proyecto de tesis — Empresa de catering',
-    repoUrl: 'https://github.com/Jefferson-BA/TesisFrontend',
-    gallery: [
-      { src: '/images/E-COMMERCE/INICIO.png', label: 'Inicio' },
-      { src: '/images/E-COMMERCE/MENU.png', label: 'Menú' },
-      { src: '/images/E-COMMERCE/MENU2.png', label: 'Menú — vista 2' },
-      { src: '/images/E-COMMERCE/Catálogo%20de%20Productos.png', label: 'Catálogo de productos' },
-      { src: '/images/E-COMMERCE/LOGIN.png', label: 'Inicio de sesión' },
-      { src: '/images/E-COMMERCE/REGISTER.png', label: 'Registro' },
-      { src: '/images/E-COMMERCE/RESERVA.png', label: 'Reserva' },
-      { src: '/images/E-COMMERCE/RESERVA2.png', label: 'Reserva — vista 2' },
-      { src: '/images/E-COMMERCE/Reservas%20Eventos.png', label: 'Reservas de eventos' },
-      { src: '/images/E-COMMERCE/VISTA.png', label: 'Vista del producto' },
-      { src: '/images/E-COMMERCE/Gestión%20de%20Pedidos.png', label: 'Gestión de pedidos (admin)' },
-      { src: '/images/E-COMMERCE/Gestión%20de%20Pedidos2.png', label: 'Gestión de pedidos — vista 2' },
-      { src: '/images/E-COMMERCE/Gestión%20de%20Productos.png', label: 'Gestión de productos (admin)' },
-      { src: '/images/E-COMMERCE/Panel%20de%20Administración.png', label: 'Panel de administración' },
-      { src: '/images/E-COMMERCE/Promociones.png', label: 'Promociones' },
-    ],
-  },
+
 ];
 
 export const experience: ExperienceItem[] = [
