@@ -167,7 +167,7 @@ export const projects: Project[] = [
   {
     id: 'tesis-catering',
     slug: 'tesis-catering',
-    title: 'E-commerce para Empresa de Catering (Tesis)',
+    title: 'E-commerce para Empresa de Catering ',
     period: '2026',
     description:
       'E-commerce desarrollado como proyecto de tesis para una empresa real de catering, donde los usuarios exploran productos y hacen reservas, con un panel de administración completo y chatbot integrado.',
